@@ -1,0 +1,22 @@
+---=== Candle'o'Candle ===---
+
+Weihnachtszeit, Kerzenzeit.
+Sie spenden warmes Licht und machen diese Zeit des Jahres erst so richtig behaglich und gemütlich.
+Doch wehe wenn eine Kerze droht runter zu brennen, dann sollte man schnellstens für Ersatz sorgen.
+Das ist das Ziel dieses kleinen Spiels. 
+
+Der Spieler hat die Aufgabe dafür zu sorgen das immer genug Kerzen brennen.
+Sieben davon gilt es zu erhalten. 
+Doch obacht, man kann die Kerzen erst dann ersetzen, 
+wenn man nur noch den Docht oder die Flamme sieht.
+Sobald die Flamme erloschen ist, scheidet diese Kerze aus dem Spiel aus.
+Gespielt wird mit dem Joystick in Port #2
+Unter den Kerzen erscheint ein kleiner grüner Pfeil den man nach links oder rechts steuern kann.
+Eine so markierte Kerze kann man dann mit dem FireButton ersetzen.
+Das Spiel ist beendet sobald nur noch eine Kerze im Spiel ist (sonst würde es ewig weiterlaufen).
+Dem Spieler, welcher die Kerzen am längsten am Leben halten konnte gebührt Ruhm und Ehre.
+
+Und nun viel Spaß mit Candle'o'Candle
+
+Viele Grüße
+Guido
