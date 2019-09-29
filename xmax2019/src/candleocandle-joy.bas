@@ -6,7 +6,6 @@
 60D(0)=0:D(1)=0:D(2)=0:D(3)=0:D(4)=0:D(5)=0:D(6)=0
 70C(0)=0:C(1)=0:C(2)=0:C(3)=0:C(4)=0:C(5)=0:C(6)=0
 80T(0)=0:T(1)=0:T(2)=0:T(3)=0:T(4)=0:T(5)=0:T(6)=0
-90G=7
 100PRINT"                                        ";
 110PRINT"               *                     ";
 120PRINT"             O'CANDLE   ";
@@ -14,9 +13,9 @@
 140PRINT"                     BY DRAZIL ";
 150PRINT"                                   ";
 160PRINT"         2019 ";
-170PRINT"                                        ";
-180PRINT"           PRESS FIRE TO START          "
-190P=3
+170PRINT"                                        ";
+180GOSUB742
+190P=3:SP=3:G=7
 200CP=1944+5+P*5:FP=56216+5+P*5
 210POKEFP,13:POKECP,30
 220GOSUB520
@@ -34,12 +33,12 @@
 340IFG=1THEN650
 350I=INT(RND(1)*G)
 360SI=S2(I)
-370IFW<2THEN420
+370IFW<SPTHEN420
 380POKE49153,C(SI)
 390SYS49152
 400W=0
 410T(SI)=PEEK(1864+C(SI))
-420IFT(SI)=32THEND(SI)=1:GOSUB640:G=G-1
+420IFT(SI)=32THEND(SI)=1:GOSUB640:G=G-1:IFG<4THENSP=0
 430J=PEEK(56320):IFP=127THEN500
 440IFJ=123THENPOKECP,32:P=P-1:GOTO470
 450IFJ=119THENPOKECP,32:P=P+1
@@ -62,16 +61,22 @@
 620RETURN
 630REM SHRINK
 640FORX=ITOG-1:S2(X)=S2(X+1):NEXT:RETURN
-650PRINT"                GAME OVER             "
+650POKECP,32
+651PRINT"                GAME OVER             "
 660PRINT"      TIME TO KEEP CANDLES BURNING"
-670PRINT"                "INT((TI-ZE)/60)" SEC."
-680PRINT"        PLAY AGAIN UP / EXIT DOWN"
+670PRINT"              "INT((TI-ZE)/60)" SECONDS"
+680PRINT"        PLAY AGAIN UP / EXIT DOWN"
 690J=PEEK(56320)
-700IFJ=126THEN30
+700IFJ=126THEN180
 710IFJ=125THEN730
 720GOTO690
 730PRINT"MAY THE CANDLELIGHT ALWAYS WITH YOU ;-)"
 740END
+742PRINT"           PRESS FIRE TO START          "
+743PRINT"                                        "
+744PRINT"                                        "
+745PRINT"                                        "
+746RETURN
 750DATA162,0,189,32,7,157,72,7,189,248,6,157,32,7,189,208,6,157,248,6,189,168,6,157
 760DATA208,6,189,128,6,157,168,6,189,88,6,157,128,6,189,48,6,157,88,6,189,8,6,157,48
 770DATA6,189,32,219,157,72,219,189,248,218,157,32,219,189,208,218,157,248,218,189,168
